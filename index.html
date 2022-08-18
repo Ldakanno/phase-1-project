@@ -4,10 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="stylesheets/index.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="javascripts/index.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>       
+    <title>The Jasmine Dragon</title>
 </head>
-<body>
-    <h1>Hello World!</h1>
-    <script src="javascripts/index.js"></script>
+<body class="teal lighten-5">
+    <nav id="navBar">
+        <div class="nav-wrapper teal darken-4">
+          <a href="#!" id="teaPageTitle" class="brand-logo"><i class="material-icons">local_cafe</i>The Jasmine Dragon</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="sass.html"><i class="material-icons">search</i></a></li>
+            <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
+            <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+          </ul>
+        </div>
+      </nav>
+    
+    <div id="quoteContainer">
+    <h3 id="quote">"Sometimes the best way to solve your own problems is to help someone else." -Uncle Iroh</h3>
+    </div>
+
+    <div id="searchFormContainer">
+    <form id="searchForm" action="#" method="GET">
+        <label for="search-label">Wanna learn more?</label>
+        <input type="text" id="teaName" name="teaName" placeholder="type in a tea name">
+        <input type="submit" value="Inform me!">
+    </form>
+    </div>
+
+
+    
 </body>
 </html>
