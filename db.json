@@ -1,5 +1,4 @@
-{
-    "teas": [
+[
       {
         "id": 1,
         "name": "Black Tea",
@@ -42,5 +41,4 @@
         "description": "Jasmine tea is most commonly made from green tea, but other teas can be used as a base. It is made by using flavorings and scents produced from jasmine flowers. Some teas are flavored with natural jasmine essential oil. Jasmine tea provides a relaxing aroma that can lower your heart rate.",
         "flavorProfile": "light, floral, aromatic"
       }
-    ]
-}
+]
