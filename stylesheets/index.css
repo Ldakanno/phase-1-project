@@ -4,6 +4,8 @@
 
 #teaPageTitle {
     margin-left: 20px;
+    font-family: "Trattatello";
+    font-weight: bold;
 }
 
 #quote {
@@ -56,11 +58,6 @@
     text-shadow: 5px 5px 10px #ffffff;
     font-size: 25px;
     margin: 70px;
-}
-
-#teaPageTitle {
-    font-family: "Trattatello";
-    font-weight: bold;
 }
 
 #learnMore {
