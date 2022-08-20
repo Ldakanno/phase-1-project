@@ -1,40 +1,40 @@
 {
-    "blackTea": [
+    "black": [
        {
         "id": 1,
         "image": "https://media.istockphoto.com/photos/black-tea-in-a-cup-picture-id475614605?b=1&k=20&m=475614605&s=612x612&w=0&h=rJ47IWDVx0UqSjWs_YlZCsN-cyXRLbtW-CMTQUmHnMs=",
         "description": "Often sold in a blend of some sort, the flavor depends on the location the plant was grown and the blend it is sold in. Consisting of many varieties, it is the most common type of tea. It supports heart health and boosts the body's defense towards oxidative stress.",
         "flavorProfile": "strong, dark"
         }],
-    "greenTea": [
+    "green": [
       {
         "id": 2,
         "image": "https://media.istockphoto.com/photos/green-tea-n-the-brown-mat-picture-id483054996?k=20&m=483054996&s=612x612&w=0&h=odtWR6GmTsng4Jqf8-avNPNl6wddDCGJ9pHnWBRVhPM=",
         "description": "The flavor of green tea is dependent on how it was processed and the location it was grown. Like black tea, it comes in many forms. Each form displays a slightly different flavor. Green tea supports brain and heart health. It boosts mental alertness and contributes to the body's natural protection against oxidative stress. It is great to help in the process of fasting",
         "flavorProfile": "light, fresh, slightly grassy"
       }],
-    "oolongTea": [
+    "oolong": [
       {
         "id": 3,
         "image": "https://www.firstforwomen.com/wp-content/uploads/sites/2/2022/02/oolong-tea-GettyImages-564075419.jpg",
         "description": "Also referred to as 'wulong' tea or 'black dragon' tea, oolong tea is a semi-oxidized. The flavor, aroma, and color is dependent on the level of oxidation. Higher oxidation levels contribute to a lighter color, and lower oxidation levels contribute to a darker color. Health benefits include several antioxidants alongside heart and brain health support.",
         "flavorProfile": "floral, fruity, thick mouthfeel"
       }],
-    "puerhTea": [
+    "puerh": [
       {
         "id": 4,
         "image": "https://topictea.com/wp-content/uploads/2020/12/pu-erh-tea-benefits-you-should-know-1024x569.jpg",
         "description": "Pu-erh undergoes a process that ivolves being hand-tossed in a wok to prevent oxidation followed by aging in a humid environment. This brings out its flavor which is more sharp and creates a dry mouth sensation compared to other teas. Health benefits include support for the heart and healthy skin. It is high in antioxidant properties which also helps with mental alertness.",
         "flavorProfile": "dark, rich"
       }],
-    "whiteTea": [
+    "white": [
       {
         "id": 5,
         "image": "https://media.istockphoto.com/photos/tea-set-and-white-tea-leaves-picture-id496566373?b=1&k=20&m=496566373&s=170667a&w=0&h=z_Q0age3Wpj7Jlo_juUwz-5ESShptAHJIkbr12TaqrQ=",
         "description": "When harvested, the leaves and buds go through a steam or frying process to stop oxidation. It is then dried. This tea is low in caffeine compared to others. Health benefits include support for dental and brain health. It also assists the body's response to inflammation and has antioxidant properties.",
         "flavorProfile": "light, delicate, fruity"
       }],
-    "jasmineTea": [
+    "jasmine": [
       {
         "id": 6,
         "image": "https://wellme.com/wp-content/uploads/2019/05/what-is-jasmine-tea.png",
