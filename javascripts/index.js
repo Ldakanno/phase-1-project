@@ -54,7 +54,7 @@ function searchForTea() {
 
 
 
-// displaySearch() will create the html elements that the data that is fetched will be placed in to be displ
+// displaySearch() will create the html elements that the data that is fetched will be placed in to be displayed
 function displaySearch(element) {
     
     const img = document.createElement("img");
@@ -75,6 +75,17 @@ function displaySearch(element) {
 
 // displayPopularTea() will be used to load info onto the card so users can view what the most popular tea is
 function displayPopularTea() {
+    fetch("http://localhost:3000/teas/6")
+    .then(response => response.json())
+    .then(data => {
+        console.log("data =>", data);
+        const popularCardImg = document.getElementById("popularTeaImg");
+        popularCardImg.src = data.image;
+        const popularTeaInfo = document.getElementById("popTeaText");
+        popularTeaInfo.textContent = `${data.description} Flavor profile: ${data.flavorProfile}.`;
+        const popTeaTitle = document.getElementById("popTeaTitle");
+        popTeaTitle.textContent = data.name;
 
-
+    })
+    
 }
