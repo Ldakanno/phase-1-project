@@ -98,48 +98,45 @@ function showHealthBenefits() {
     const heart = document.getElementById("heart");
     heart.addEventListener("click", e => {
         fetchTea("heart", "heartInfo");
-    });
+    }, {once : true});
     
     
     const brain = document.getElementById("brain");
     brain.addEventListener("click", e => {
         fetchTea("brain", "brainInfo")
-    });
+    }, {once : true});
     
     const antioxidant = document.getElementById("antioxidant");
     antioxidant.addEventListener("click", e => {
         fetchTea("antioxidant", "antioxidantInfo")
-    });
+    }, {once : true});
+
+
     
 }
 
 
 
+// fetchTea() is used to make the code more destructured and interchangable if a different function needs to be used.
+//  it makes a GET request 
 
 function fetchTea(benefit, id) {
     
     fetch("http://localhost:3000/teas")
     .then(response => response.json())
     .then(data => {
-        data.filter(tea => {
+        data.filter(tea => { 
+            const benefitLi = document.createElement("li");
+    
             if (tea.description.includes(benefit)) {
-                displayTeaName(id, tea);
+
+                benefitLi.textContent = tea.name
+                const benefitList = document.getElementById(id);
+                benefitList.append(benefitLi);
+                
             }
+           
         })
     })
     
 }
-
-
-
-
-function displayTeaName(id, tea) {
-    
-    const benefitLi = document.createElement("li");
-    benefitLi.textContent = tea.name
-    const benefitList = document.getElementById(id);
-    benefitList.append(benefitLi);
-    
-}
-
-
