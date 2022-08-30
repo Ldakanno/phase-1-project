@@ -35,7 +35,7 @@ function searchForTea() {
                 const oneWordSearch = element.name.split(" ");
                 if ( userSearchInput === element.name.toLowerCase() || userSearchInput === oneWordSearch[0].toLowerCase()) {
                     displaySearch(element);
-                }
+                } 
             });
             
         }).catch((error) => {
