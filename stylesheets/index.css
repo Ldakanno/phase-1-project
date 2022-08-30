@@ -3,7 +3,7 @@
 }
 
 #quote {
-    font-style: italic;
+    font-weight: bold;
     font-family: "Optima";
     text-shadow: 2px 2px 2px #3b3a3a;
     text-align: center;
@@ -16,8 +16,8 @@
 }
 
 #description {
-    font-weight: bold;
-    font-family: "Optima";
+    font-weight: italic;
+    font-family: "Rockwell";
     text-shadow: 5px 5px 10px #ffffff;
     font-size: 25px;
     margin: 70px;
@@ -32,7 +32,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 #searchFormContainer {
@@ -53,6 +53,7 @@
 
 #searchedTea {
     margin: 50px;
+    font-family: "Rockwell";
 }
 
 #searchedTea img {
@@ -65,6 +66,7 @@
 
 #popularTeaContainer {
     margin: 70px;
+    font-family: "Optima";
 }
 
 #popularTeaTitle {
@@ -89,4 +91,9 @@
 
 .listDiv {
     font-size: 25px;
+}
+
+#lastQuote {
+    font-family: "Optima";
+
 }
