@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     displayPopularTea();
 
+    showHealthBenefits();
+    
 })
 
 
@@ -49,11 +51,6 @@ function searchForTea() {
 
 
 
-
-
-
-
-
 // displaySearch() will create the html elements that the data that is fetched will be placed in to be displayed
 function displaySearch(element) {
     
@@ -78,14 +75,71 @@ function displayPopularTea() {
     fetch("http://localhost:3000/teas/6")
     .then(response => response.json())
     .then(data => {
-        console.log("data =>", data);
         const popularCardImg = document.getElementById("popularTeaImg");
         popularCardImg.src = data.image;
         const popularTeaInfo = document.getElementById("popTeaText");
         popularTeaInfo.textContent = `${data.description} Flavor profile: ${data.flavorProfile}.`;
         const popTeaTitle = document.getElementById("popTeaTitle");
         popTeaTitle.textContent = data.name;
-
+        
     })
     
 }
+
+
+
+
+
+// showHealthBenefits() will allow the user to click on icons correlating to the tea that supports that area of health.
+// The light bulb represents the brain, the body is representing antioxidants, and the heart represents the heart. 
+function showHealthBenefits() {
+    
+    
+    const heart = document.getElementById("heart");
+    heart.addEventListener("click", e => {
+        fetchTea("heart", "heartInfo");
+    });
+    
+    
+    const brain = document.getElementById("brain");
+    brain.addEventListener("click", e => {
+        fetchTea("brain", "brainInfo")
+    });
+    
+    const antioxidant = document.getElementById("antioxidant");
+    antioxidant.addEventListener("click", e => {
+        fetchTea("antioxidant", "antioxidantInfo")
+    });
+    
+}
+
+
+
+
+function fetchTea(benefit, id) {
+    
+    fetch("http://localhost:3000/teas")
+    .then(response => response.json())
+    .then(data => {
+        data.filter(tea => {
+            if (tea.description.includes(benefit)) {
+                displayTeaName(id, tea);
+            }
+        })
+    })
+    
+}
+
+
+
+
+function displayTeaName(id, tea) {
+    
+    const benefitLi = document.createElement("li");
+    benefitLi.textContent = tea.name
+    const benefitList = document.getElementById(id);
+    benefitList.append(benefitLi);
+    
+}
+
+
