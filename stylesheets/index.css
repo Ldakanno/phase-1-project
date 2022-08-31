@@ -45,9 +45,18 @@
     margin: 50px;
 }
 
+#btn {
+    font-family: "Rockwell";
+}
+
+#teaName {
+    font-family: "Rockwell";
+    font-size: 20px;
+}
+
 #learnMore {
     font-family: "Rockwell";
-    font-size: 18px;
+    font-size: 25px;
     font-weight: bold;
 }
 
