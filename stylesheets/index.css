@@ -3,9 +3,9 @@
 }
 
 #quote {
-    font-weight: bold;
+    font-weight: 900;
     font-family: "Optima";
-    text-shadow: 2px 2px 2px #3b3a3a;
+    text-shadow: 2px 2px 5px #fff;
     text-align: center;
 }
 
@@ -16,9 +16,11 @@
 }
 
 #description {
-    font-weight: italic;
     font-family: "Rockwell";
-    text-shadow: 5px 5px 10px #ffffff;
+    text-shadow: 5px 5px 10px #fff,
+    5px 5px 30px #fff;
+    text-indent: 50px;
+    text-align: left;
     font-size: 25px;
     margin: 70px;
 }
