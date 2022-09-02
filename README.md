@@ -54,5 +54,6 @@ Ba Sing Se information provided by:
 - https://avatar.fandom.com/wiki/Ba_Sing_Se
 
 Tea information provided by: 
-- https://www.thespruceeats.com/what-is-jasmine-tea-765151, and https://blog.piquelife.com/types-of-tea/
+- https://www.thespruceeats.com/what-is-jasmine-tea-765151
+- https://blog.piquelife.com/types-of-tea/
 - https://www.valleybrooktea.com/post/why-do-some-oolong-taste-like-green-tea
