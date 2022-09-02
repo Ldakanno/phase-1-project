@@ -1,31 +1,24 @@
 // DOMContentLoaded is used here because defer isnt in our script tags nor is our script
 // tag at the bottom of our body in the HTML file, and we want the content displayed upon load
 document.addEventListener("DOMContentLoaded", e => {
-    
     searchForTea();
-
     displayPopularTea();
-
-    showHealthBenefits();
-    
+    showHealthBenefits(); 
 })
+
 
 
 
 //     searchForTea() will handle the form that is used to search for a tea name. The user
 //  will receive information related to the tea that they searched for only if the tea shop offers it on their menu. 
 //  If the tea shop does not have it, an alert will pop up suggesting a proper search term to use or a type of tea that is offered.
-function searchForTea() {
-    
+function searchForTea() {  
     const div = document.getElementById("searchedTea");
     const form = document.getElementById("searchForm");
-    form.addEventListener("submit", event => {
-        
+    form.addEventListener("submit", event => {  
         event.preventDefault(); 
         div.textContent = "";
         const userSearchInput = event.target.teaName.value.toLowerCase();
-        
-        
         fetch("http://localhost:3000/teas")
         .then(response => response.json())
         .then(data => {
@@ -36,18 +29,13 @@ function searchForTea() {
                 if ( userSearchInput === element.name.toLowerCase() || userSearchInput === element.name.split(" ")[0].toLowerCase()) {
                     displaySearch(element, div);
                 };
-            });
-
-            
-            
+            });    
         }).catch((error) => {
             console.log(error);
             alert("Whoops! Something went wrong. Please try again.");
         })
-        
         form.reset()
-    })
-    
+    })   
 }
 
 
@@ -55,18 +43,13 @@ function searchForTea() {
 
 // displaySearch() will create the html elements that the data that is fetched will be placed in to be displayed
 function displaySearch(element, div) {
-    
     const img = document.createElement("img");
     img.src = element.image
-    
     const h4 = document.createElement("h4");
     h4.textContent = element.name;
-    
     const p = document.createElement("p");
     p.textContent = element.description + ` Flavor profile: ${element.flavorProfile}.`;
-    
     div.append(img, h4, p);
-    
 }
 
 
@@ -82,12 +65,9 @@ function displayPopularTea() {
         const popularTeaInfo = document.getElementById("popTeaText");
         popularTeaInfo.textContent = `${data.description} Flavor profile: ${data.flavorProfile}.`;
         const popTeaTitle = document.getElementById("popTeaTitle");
-        popTeaTitle.textContent = data.name;
-        
-    })
-    
+        popTeaTitle.textContent = data.name; 
+    })  
 }
-
 
 
 
@@ -95,50 +75,36 @@ function displayPopularTea() {
 // showHealthBenefits() will allow the user to click on icons correlating to the tea that supports that area of health.
 // The light bulb represents the brain, the body is representing antioxidants, and the heart represents the heart. 
 function showHealthBenefits() {
-    
-    
     const heart = document.getElementById("heart");
     heart.addEventListener("click", e => {
         fetchTea("heart", "heartInfo");
     }, {once : true});
-    
-    
     const brain = document.getElementById("brain");
     brain.addEventListener("click", e => {
         fetchTea("brain", "brainInfo")
     }, {once : true});
-    
     const antioxidant = document.getElementById("antioxidant");
     antioxidant.addEventListener("click", e => {
         fetchTea("antioxidant", "antioxidantInfo")
-    }, {once : true});
-
-
-    
+    }, {once : true}); 
 }
+
 
 
 
 // fetchTea() is used to make the code more destructured and interchangable if a different function needs to be used.
 //  it makes a GET request 
-
-function fetchTea(benefit, id) {
-    
+function fetchTea(benefit, id) { 
     fetch("http://localhost:3000/teas")
     .then(response => response.json())
     .then(data => {
         data.filter(tea => { 
             const benefitLi = document.createElement("li");
-    
             if (tea.description.includes(benefit)) {
-
                 benefitLi.textContent = tea.name
                 const benefitList = document.getElementById(id);
                 benefitList.append(benefitLi);
-                
             }
-           
         })
-    })
-    
+    }) 
 }
