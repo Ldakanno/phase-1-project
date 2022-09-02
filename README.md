@@ -27,8 +27,13 @@ This project was created to practice making fetch requests and display the core 
 
 ## How To Use
 ### This is how the web application looks in action: 
+![](https://media.giphy.com/media/mq7PrpXWcH9ipVGups/giphy.gif)
 
-insert gif
+The search bar allows users to find information about tea that is offered on the menu.
+
+![](https://media.giphy.com/media/WUCVSuuVQ9kv10y8MB/giphy.gif)
+
+The footer of the web application has click events that reveal lists of teas. 
 
 
 ## Requirements
